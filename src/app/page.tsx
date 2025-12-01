@@ -10,9 +10,9 @@ import { BrochureButton } from "@/components/BrochureButton";
 
 export default function Home() {
   return (
-    <div className="w-full">
+    <div className="w-full h-screen overflow-y-scroll snap-y snap-mandatory">
       {/* SECTION 1 - HERO */}
-      <section className="w-full flex items-center justify-center h-screen bg-champagne-gold/30">
+      <section className="w-full flex items-center justify-center h-screen bg-champagne-gold/80 snap-start">
         <Image
           src="/images/hero-logo.png"
           alt="Soho Residences Los Cabos"
@@ -24,11 +24,11 @@ export default function Home() {
       </section>
 
       {/* SECTIONS 2-4 WITH NAVIGATION BAR */}
-      <div className="relative">
+      <div className="relative snap-start">
         <NavigationBar />
 
         {/* SECTION 2 - PROJECT RENDER */}
-        <section className="w-full bg-white flex items-center justify-center h-screen">
+        <section className="w-full flex items-center justify-center h-screen">
           <div className="w-full h-full pt-[70px] relative">
             <Image
               src="/images/Scene2.png"
@@ -43,8 +43,7 @@ export default function Home() {
         {/* SECTION 3 - INQUIRY FORM */}
         <section
           id="inquire"
-          className="w-full flex items-center justify-center px-6 md:px-20 h-screen pt-[70px]"
-          style={{ backgroundColor: "#FFFEF7" }}
+          className="w-full flex items-center justify-center px-6 md:px-20 h-screen pt-20 snap-start bg-beach-house"
         >
           <div className="flex flex-col gap-0 w-full md:w-auto max-w-[650px]">
             <h2
@@ -133,7 +132,7 @@ export default function Home() {
         {/* SECTION 4 - EDITORIAL BROCHURE */}
         <section
           id="brochure"
-          className="w-full flex items-center justify-center px-6 md:px-20 h-screen pt-[70px] bg-champagne-gold/30"
+          className="w-full flex items-center justify-center px-6 md:px-20 h-screen pt-[70px] bg-champagne-gold/50 snap-start"
         >
           <div className="flex flex-col items-center text-center max-w-[700px]">
             <h2 className="text-[48px] md:text-[64px] tracking-[0.01em] leading-[1.1] mb-8">
@@ -157,7 +156,7 @@ export default function Home() {
       </div>
 
       {/* SECTION 5 - LEGAL DISCLAIMER */}
-      <section className="w-full flex justify-center min-h-[600px] py-20 bg-front-door-navy">
+      <section className="w-full flex justify-center min-h-[600px] py-20 bg-front-door-navy snap-start">
         <div className="w-full px-6 md:px-20 max-w-[1440px]">
           <div className="flex flex-col md:flex-row justify-between gap-12">
             {/* Left Column - Legal Text */}
