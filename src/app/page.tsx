@@ -31,7 +31,7 @@ export default function Home() {
         <section className="w-full bg-white flex items-center justify-center h-screen">
           <div className="w-full h-full pt-[70px] relative">
             <Image
-              src="/images/scene2.png"
+              src="/images/Scene2.png"
               alt="Soho Residences Los Cabos - Property Render"
               fill
               className="object-cover"
