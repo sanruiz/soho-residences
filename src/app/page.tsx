@@ -10,7 +10,7 @@ export default function Home() {
       {/* SECTION 1 - HERO */}
       <section className="w-full flex items-center justify-center h-screen bg-linen snap-start">
         <Image
-          src="/icons/sohoresidenceslogo.svg"
+          src="/icons/sohoresidencesloscaboslogo.svg"
           alt="Soho Residences Los Cabos"
           width={500}
           height={200}
