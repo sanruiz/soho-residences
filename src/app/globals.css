@@ -10,6 +10,28 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+/* Custom Colors */
+  --color-beach-house: #B2BEC1;
+  --color-blush: #EACEB6;
+  --color-burl: #764F3D;
+  --color-chartreuse: #DEC657;
+  --color-champagne-gold: #C6C1AE;
+  --color-dining-room-blue: #00455A;
+  --color-dining-room-red: #653C3E;
+  --color-dusk: #D1ADC0;
+  --color-forest: #5A5B2E;
+  --color-front-door-navy: #2E3641;
+  --color-ink: #262420;
+  --color-linen: #FFFEF7;
+  --color-manchester-green: #434D40;
+  --color-putty: #C1AC8D;
+  --color-snow-white: #FDFBF9;
+  --color-tallow: #DDD9CE;
+  --color-teal: #487674;
+  --color-velvet: #AE9526;
+  --color-vino-rojo: #572932;
+  --color-walnut: #2C0F0F;
+  --color-yellow-room-picante: #F8E0A0;
 }
 
 @media (prefers-color-scheme: dark) {
