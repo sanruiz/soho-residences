@@ -4,8 +4,8 @@ import Image from "next/image";
 
 export function NavigationBar() {
   return (
-    <nav className="sticky top-0 z-50 bg-white">
-      <div className="flex items-center justify-between h-16 px-6 md:px-20">
+    <nav className="sticky top-0 z-50 px-6 md:px-20 bg-white">
+      <div className="flex max-w-7xl mx-auto items-center justify-between h-16 gap-8 ">
         {/* Logo Icon */}
         <Image
           src="/images/nav-logo.png"

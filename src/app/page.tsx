@@ -2,6 +2,7 @@ import Image from "next/image";
 import { NavigationBar } from "@/components/NavigationBar";
 import { ContactForm } from "@/components/ContactForm";
 import { BrochureButton } from "@/components/BrochureButton";
+import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -79,74 +80,38 @@ export default function Home() {
       </div>
 
       {/* SECTION 5 - LEGAL DISCLAIMER */}
-      <section className="w-full flex justify-center min-h-[600px] py-20 bg-front-door-navy snap-start">
-        <div className="w-full px-6 md:px-20 max-w-[1440px]">
-          <div className="flex flex-col md:flex-row justify-between gap-12">
-            {/* Left Column - Legal Text */}
-            <div className="max-w-[640px] text-linen text-[13px] leading-[1.7] opacity-85 tracking-[0.01em]">
-              <p className="mb-6">
-                IMPORTANT NOTICE: The information contained in this website is
-                for general informational purposes only and does not constitute
-                an offer to sell or a solicitation of an offer to buy any units
-                or residences. Any offering can only be made by means of a
-                prospectus or offering plan, as applicable.
-              </p>
-              <p className="mb-6">
-                All images, renderings, and descriptions are conceptual and for
-                illustrative purposes only and are subject to change. Amenities,
-                features, finishes, services, and other details shown are
-                proposed and are subject to change at any time without notice.
-              </p>
-              <p className="mb-6">
-                Development is being undertaken by Soho Residences Development
-                LLC (&quot;Developer&quot;). The project will be marketed and
-                sold by an appropriately licensed real estate broker. This is
-                not intended to be an offer to sell, or solicitation of an offer
-                to buy, units in any jurisdiction where prohibited by law.
-              </p>
-              <p className="mb-6">
-                Soho House membership is separate and not included with the
-                purchase of a residence. Membership is subject to availability
-                and approval by Soho House. Equal Housing Opportunity.
-              </p>
-              <p>
-                © 2025 Soho Residences. All rights reserved. Soho Residences,
-                Soho House and all related marks are trademarks of Soho House
-                &amp; Co. Inc.
-              </p>
-            </div>
-
-            {/* Right Column - Logos */}
-            <div className="flex flex-row items-end gap-6 md:self-end">
-              <a
-                href="https://soma.group/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src="/icons/soma_black.svg"
-                  alt="Soma"
-                  width={118}
-                  height={14}
-                  className="invert opacity-85 hover:opacity-100 transition-opacity"
-                />
-              </a>
-              <a
-                href="https://www.sohohouse.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src="/icons/soho-icon.svg"
-                  alt="Soho House Icon"
-                  width={40}
-                  height={40}
-                  className="invert opacity-85 hover:opacity-100 transition-opacity"
-                />
-              </a>
-            </div>
+      <section className="w-full  justify-center  py-12 px-6 md:px-20 bg-front-door-navy snap-start">
+        <div className="max-w-7xl mx-auto text-linen text-[13px] leading-[1.7] opacity-85 tracking-[0.01em]">
+          <div className="max-w-xl">
+            <p className="mb-6">
+              IMPORTANT NOTICE: The information contained in this website is for
+              general informational purposes only and does not constitute an
+              offer to sell or a solicitation of an offer to buy any units or
+              residences. Any offering can only be made by means of a prospectus
+              or offering plan, as applicable.
+            </p>
+            <p className="mb-6">
+              All images, renderings, and descriptions are conceptual and for
+              illustrative purposes only and are subject to change. Amenities,
+              features, finishes, services, and other details shown are proposed
+              and are subject to change at any time without notice.
+            </p>
+            <p className="mb-6">
+              Development is being undertaken by Soho Residences Development LLC
+              (&quot;Developer&quot;). The project will be marketed and sold by
+              an appropriately licensed real estate broker. This is not intended
+              to be an offer to sell, or solicitation of an offer to buy, units
+              in any jurisdiction where prohibited by law.
+            </p>
+            <p className="mb-6">
+              Soho House membership is separate and not included with the
+              purchase of a residence. Membership is subject to availability and
+              approval by Soho House. Equal Housing Opportunity.
+            </p>
           </div>
         </div>
+
+        <Footer />
       </section>
     </div>
   );

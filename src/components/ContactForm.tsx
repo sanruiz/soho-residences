@@ -112,7 +112,11 @@ export function ContactForm() {
         />
         <span className="text-[14px] leading-[1.6] tracking-[0.01em]">
           I confirm I have read and understood the terms of the{" "}
-          <a href="#" className="font-semibold underline">
+          <a
+            href="/privacy-policy"
+            target="_blank"
+            className="font-semibold underline"
+          >
             Privacy Policy
           </a>
           .
@@ -133,11 +137,11 @@ export function ContactForm() {
 
       <p className="mt-6 text-[12px] leading-[1.6] opacity-70 tracking-[0.01em]">
         This site is protected by reCAPTCHA and the{" "}
-        <a href="#" className="font-semibold">
+        <a href="/privacy-policy" target="_blank" className="font-semibold">
           Privacy Policy
         </a>{" "}
         and{" "}
-        <a href="#" className="font-semibold">
+        <a href="/privacy-policy" target="_blank" className="font-semibold">
           Terms of Service
         </a>{" "}
         apply.
