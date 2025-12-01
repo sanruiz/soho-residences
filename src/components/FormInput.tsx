@@ -65,13 +65,11 @@ interface BedroomSelectorProps {
 export function BedroomSelector({ label }: BedroomSelectorProps) {
   return (
     <div className="relative w-full border border-[rgb(141,141,141)] pt-6 pb-2 px-4">
-      <label 
-        className="absolute top-2 left-4 text-[11px] opacity-60 tracking-[0.01em] capitalize"
-      >
+      <label className="absolute top-2 left-4 text-[11px] opacity-60 tracking-[0.01em] capitalize">
         {label}
       </label>
       <div className="flex gap-3">
-        {[3, 4, 5].map((num) => (
+        {[2, 3, 4].map((num) => (
           <label key={num} className="cursor-pointer">
             <input
               type="radio"
@@ -79,9 +77,7 @@ export function BedroomSelector({ label }: BedroomSelectorProps) {
               value={num}
               className="peer sr-only"
             />
-            <div 
-              className="w-12 h-12 flex items-center justify-center transition-all border border-front-door-navy text-base peer-checked:bg-front-door-navy hover:bg-front-door-navy peer-checked:text-linen hover:text-linen"
-            >
+            <div className="w-12 h-12 flex items-center justify-center transition-all border border-front-door-navy text-base peer-checked:bg-front-door-navy hover:bg-front-door-navy peer-checked:text-linen hover:text-linen">
               {num}
             </div>
           </label>
