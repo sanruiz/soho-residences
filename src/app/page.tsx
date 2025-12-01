@@ -8,13 +8,13 @@ export default function Home() {
   return (
     <div className="w-full h-screen overflow-y-scroll snap-y snap-mandatory">
       {/* SECTION 1 - HERO */}
-      <section className="w-full flex items-center justify-center h-screen bg-champagne-gold/80 snap-start">
+      <section className="w-full flex items-center justify-center h-screen bg-linen snap-start">
         <Image
-          src="/images/hero-logo.png"
+          src="/icons/sohoresidenceslogo.svg"
           alt="Soho Residences Los Cabos"
           width={500}
           height={200}
-          className="max-w-[90%] max-h-[200px] w-auto h-auto"
+          className="max-w-10/12 max-h-52 w-auto h-auto fill-front-door-navy"
           priority
         />
       </section>
@@ -41,11 +41,8 @@ export default function Home() {
           id="inquire"
           className="w-full flex items-center justify-center px-6 md:px-20 h-screen pt-20 snap-start bg-beach-house"
         >
-          <div className="flex flex-col gap-0 w-full md:w-auto max-w-[650px]">
-            <h2
-              className="mb-8 text-[32px] tracking-[0.01em]"
-              style={{ fontFamily: "var(--font-family-heading)" }}
-            >
+          <div className="flex flex-col gap-0 w-full md:w-auto max-w-2xl">
+            <h2 className="mb-8 text-3xl tracking-[0.01em] text-front-door-navy ">
               Inquire now
             </h2>
 
@@ -58,16 +55,16 @@ export default function Home() {
           id="brochure"
           className="w-full flex items-center justify-center px-6 md:px-20 h-screen pt-20 bg-champagne-gold/50 snap-start"
         >
-          <div className="flex flex-col items-center text-center max-w-[700px]">
-            <h2 className="text-[48px] md:text-[64px] tracking-[0.01em] leading-[1.1] mb-8">
+          <div className="flex flex-col items-center text-center max-w-[700px] text-front-door-navy">
+            <h2 className="text-[48px] md:text-6xl tracking-[0.01em] leading-[1.1]  mb-8">
               Soho Residences
               <br />
               Los Cabos
             </h2>
 
-            <p className="text-[16px] md:text-[17px] leading-[1.7] mb-4 text- opacity-85">
+            <p className="text-base md:text-lg leading-7  mb-4 opacity-85">
               Discover our collection of exclusive residences where the desert
-              meets the sea. <br />
+              dances with the sea. <br />
               Download our brochure to explore floor plans, amenities, and the
               Soho House lifestyle.
             </p>

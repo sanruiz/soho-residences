@@ -79,7 +79,10 @@ export function ContactForm() {
         required
       />
 
-      <BedroomSelector label="Number of bedrooms" defaultValue={2} />
+      <BedroomSelector
+        label="Number of bedrooms you’re interested in"
+        defaultValue={2}
+      />
 
       <RadioGroup
         label="Are you a real estate agent?"
