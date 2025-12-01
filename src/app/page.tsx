@@ -28,13 +28,13 @@ export default function Home() {
         <NavigationBar />
 
         {/* SECTION 2 - PROJECT RENDER */}
-        <section className="w-full flex items-center justify-center h-screen">
-          <div className="w-full h-full pt-[70px] relative">
+        <section className="w-full flex items-center justify-center h-screen bg-white">
+          <div className="w-full h-full pt-16 relative">
             <Image
               src="/images/Scene2.png"
               alt="Soho Residences Los Cabos - Property Render"
               fill
-              className="object-cover"
+              className="object-cover object-center md:object-top"
               priority
             />
           </div>
@@ -99,7 +99,7 @@ export default function Home() {
             <label className="flex items-start gap-3 mt-6 cursor-pointer">
               <input
                 type="checkbox"
-                className="w-5 h-5 mt-0.5 border border-[rgb(141,141,141)] bg-transparent appearance-none checked:bg-front-door-navy cursor-pointer"
+                className="w-5 h-5 mt-0.5 border border-front-door-navy bg-transparent appearance-none checked:bg-front-door-navy cursor-pointer"
                 required
               />
               <span className="text-[14px] leading-[1.6] tracking-[0.01em]">
@@ -111,7 +111,7 @@ export default function Home() {
               </span>
             </label>
 
-            <button className="mt-6 transition-all px-6 h-12 rounded-full cursor-pointer hover:bg-front-door-navy border border-front-door-navy hover:text-linen bg-transparent text-front-door-navy w-full">
+            <button className="mt-6 transition-all px-6 h-12 rounded-full cursor-pointer bg-front-door-navy border border-front-door-navy text-linen hover:bg-transparent hover:text-front-door-navy w-full">
               Submit
             </button>
 
@@ -132,7 +132,7 @@ export default function Home() {
         {/* SECTION 4 - EDITORIAL BROCHURE */}
         <section
           id="brochure"
-          className="w-full flex items-center justify-center px-6 md:px-20 h-screen pt-[70px] bg-champagne-gold/50 snap-start"
+          className="w-full flex items-center justify-center px-6 md:px-20 h-screen pt-20 bg-champagne-gold/50 snap-start"
         >
           <div className="flex flex-col items-center text-center max-w-[700px]">
             <h2 className="text-[48px] md:text-[64px] tracking-[0.01em] leading-[1.1] mb-8">
