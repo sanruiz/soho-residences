@@ -1,11 +1,6 @@
 import Image from "next/image";
 import { NavigationBar } from "@/components/NavigationBar";
-import {
-  FormInput,
-  RadioGroup,
-  BedroomSelector,
-  SelectInput,
-} from "@/components/FormInput";
+import { ContactForm } from "@/components/ContactForm";
 import { BrochureButton } from "@/components/BrochureButton";
 
 export default function Home() {
@@ -53,79 +48,7 @@ export default function Home() {
               Inquire now
             </h2>
 
-            <RadioGroup
-              label="Are you a Soho House member?"
-              options={["Yes", "No"]}
-              name="member"
-            />
-
-            <FormInput label="Full name" placeholder="" required />
-
-            <FormInput
-              label="Phone number"
-              type="tel"
-              placeholder=""
-              required
-            />
-
-            <FormInput
-              label="Email address"
-              type="email"
-              placeholder=""
-              required
-            />
-
-            <BedroomSelector label="Number of bedrooms" />
-
-            <RadioGroup
-              label="Are you a real estate agent?"
-              options={["Yes", "No"]}
-              name="agent"
-            />
-
-            <SelectInput
-              label="How did you learn about us?"
-              options={[
-                "Soho House",
-                "Friends",
-                "Social Media",
-                "SOMA",
-                "PR",
-                "Other",
-              ]}
-            />
-
-            {/* Privacy Policy Checkbox */}
-            <label className="flex items-start gap-3 mt-6 cursor-pointer">
-              <input
-                type="checkbox"
-                className="w-5 h-5 mt-0.5 border border-front-door-navy bg-transparent appearance-none checked:bg-front-door-navy cursor-pointer"
-                required
-              />
-              <span className="text-[14px] leading-[1.6] tracking-[0.01em]">
-                I confirm I have read and understood the terms of the{" "}
-                <a href="#" className="font-semibold underline">
-                  Privacy Policy
-                </a>
-                .
-              </span>
-            </label>
-
-            <button className="mt-6 transition-all px-6 h-12 rounded-full cursor-pointer bg-front-door-navy border border-front-door-navy text-linen hover:bg-transparent hover:text-front-door-navy w-full">
-              Submit
-            </button>
-
-            <p className="mt-6 text-[12px] leading-[1.6] opacity-70 tracking-[0.01em]">
-              This site is protected by reCAPTCHA and the{" "}
-              <a href="#" className="font-semibold">
-                Privacy Policy
-              </a>{" "}
-              and{" "}
-              <a href="#" className="font-semibold">
-                Terms of Service
-              </a>{" "}
-              apply.
-            </p>
+            <ContactForm />
           </div>
         </section>
 
