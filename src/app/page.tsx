@@ -6,6 +6,7 @@ import {
   BedroomSelector,
   SelectInput,
 } from "@/components/FormInput";
+import { BrochureButton } from "@/components/BrochureButton";
 
 export default function Home() {
   return (
@@ -148,9 +149,9 @@ export default function Home() {
               Soho House lifestyle.
             </p>
 
-            <button className="mt-6 transition-all px-6 h-10 rounded-full cursor-pointer hover:bg-front-door-navy border border-front-door-navy hover:text-linen bg-transparent text-front-door-navy">
+            <BrochureButton className="mt-6 transition-all px-6 h-10 rounded-full cursor-pointer hover:bg-front-door-navy border border-front-door-navy hover:text-linen bg-transparent text-front-door-navy">
               View brochure
-            </button>
+            </BrochureButton>
           </div>
         </section>
       </div>
