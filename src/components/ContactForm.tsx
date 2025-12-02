@@ -80,7 +80,7 @@ export function ContactForm() {
       />
 
       <BedroomSelector
-        label="Number of bedrooms you’re interested in"
+        label="Number of bedrooms you're interested in"
         defaultValue={2}
       />
 
@@ -113,7 +113,7 @@ export function ContactForm() {
           className="w-5 h-5 mt-0.5 border border-front-door-navy bg-transparent appearance-none checked:bg-front-door-navy cursor-pointer"
           required
         />
-        <span className="text-[14px] leading-[1.6] tracking-[0.01em]">
+        <span className="text-sm leading-snug tracking-wide">
           I confirm I have read and understood the terms of the{" "}
           <a
             href="/privacy-policy"
@@ -138,7 +138,7 @@ export function ContactForm() {
         {isPending ? "Submitting..." : "Submit"}
       </button>
 
-      <p className="mt-6 text-[12px] leading-[1.6] opacity-70 tracking-[0.01em]">
+      <p className="mt-6 text-xs leading-snug opacity-70 tracking-wide">
         This site is protected by reCAPTCHA and the{" "}
         <a href="/privacy-policy" target="_blank" className="font-semibold">
           Privacy Policy

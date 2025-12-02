@@ -55,8 +55,8 @@ export default function Home() {
           id="brochure"
           className="w-full flex items-center justify-center px-6 md:px-20 h-screen pt-20 bg-champagne-gold/50 snap-start"
         >
-          <div className="flex flex-col items-center text-center max-w-[700px] text-front-door-navy">
-            <h2 className="text-[48px] md:text-6xl tracking-[0.01em] leading-[1.1]  mb-8">
+          <div className="flex flex-col items-center text-center max-w-3xl text-front-door-navy">
+            <h2 className="text-5xl md:text-6xl tracking-wide leading-snug  mb-8">
               Soho Residences
               <br />
               Los Cabos
@@ -78,7 +78,7 @@ export default function Home() {
 
       {/* SECTION 5 - LEGAL DISCLAIMER */}
       <section className="w-full  justify-center  py-12 px-6 md:px-20 bg-front-door-navy snap-start">
-        <div className="max-w-7xl mx-auto text-linen text-[13px] leading-[1.7] opacity-85 tracking-[0.01em]">
+        <div className="max-w-7xl mx-auto text-linen text-sm leading-5 opacity-85 tracking-wide">
           <div className="max-w-xl">
             <p className="mb-6">
               IMPORTANT NOTICE: The information contained in this website is for
