@@ -93,17 +93,11 @@ export default function Home() {
               features, finishes, services, and other details shown are proposed
               and are subject to change at any time without notice.
             </p>
-            <p className="mb-6">
-              Development is being undertaken by Soho Residences Development LLC
-              (&quot;Developer&quot;). The project will be marketed and sold by
-              an appropriately licensed real estate broker. This is not intended
-              to be an offer to sell, or solicitation of an offer to buy, units
-              in any jurisdiction where prohibited by law.
-            </p>
+
             <p className="mb-6">
               Soho House membership is separate and not included with the
               purchase of a residence. Membership is subject to availability and
-              approval by Soho House. Equal Housing Opportunity.
+              approval by Soho House.
             </p>
           </div>
         </div>
