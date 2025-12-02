@@ -7,8 +7,13 @@ export function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
           {/* Logo */}
-          <div className="flex items-center justify-between w-full gap-4">
-            <Link className="flex items-center gap-2 hover:opacity-70" href="https://www.sohohouse.com/" title="sohohouse.com" target="_blank">
+          <div className="flex md:flex-row  items-center justify-between w-full">
+            <Link
+              className="flex items-center gap-2 hover:opacity-70"
+              href="https://www.sohohouse.com/"
+              title="sohohouse.com"
+              target="_blank"
+            >
               <Image
                 src="/icons/soho-icon.svg"
                 alt="Soho Residences Los Cabos"
@@ -16,12 +21,12 @@ export function Footer() {
                 height={40}
                 className="h-10 w-auto invert  transition-opacity"
               />
-               <Image
+              <Image
                 src="/icons/soho-logo.svg"
                 alt="Soho Residences Los Cabos"
-                width={100}
+                width={80}
                 height={20}
-                className="h-6 w-auto invert transition-opacity"
+                className="h-4 w-auto invert transition-opacity"
               />
             </Link>
 
