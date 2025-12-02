@@ -56,7 +56,7 @@ export default function Home() {
           className="w-full flex items-center justify-center px-6 md:px-20 h-screen pt-20 bg-champagne-gold/50 snap-start"
         >
           <div className="flex flex-col items-center text-center max-w-3xl text-front-door-navy">
-            <h2 className="text-5xl md:text-6xl tracking-wide leading-snug  mb-8">
+            <h2 className="text-5xl md:text-6xl  mb-8">
               Soho Residences
               <br />
               Los Cabos
