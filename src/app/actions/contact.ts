@@ -1,7 +1,6 @@
 "use server";
 
-import { promises as fs } from "fs";
-import path from "path";
+import { put, list } from "@vercel/blob";
 
 interface ContactFormData {
   isSohoMember: string;
@@ -14,7 +13,7 @@ interface ContactFormData {
   submittedAt: string;
 }
 
-const CSV_FILE_PATH = path.join(process.cwd(), "data", "contacts.csv");
+const BLOB_FILENAME = "contacts.csv";
 
 const CSV_HEADERS = [
   "Submitted At",
@@ -27,30 +26,31 @@ const CSV_HEADERS = [
   "How Did You Hear",
 ];
 
-async function ensureDataDirectory() {
-  const dataDir = path.join(process.cwd(), "data");
-  try {
-    await fs.access(dataDir);
-  } catch {
-    await fs.mkdir(dataDir, { recursive: true });
-  }
-}
-
-async function ensureCsvFile() {
-  await ensureDataDirectory();
-  try {
-    await fs.access(CSV_FILE_PATH);
-  } catch {
-    // Create file with headers if it doesn't exist
-    await fs.writeFile(CSV_FILE_PATH, CSV_HEADERS.join(",") + "\n");
-  }
-}
-
 function escapeCSV(value: string): string {
   if (value.includes(",") || value.includes('"') || value.includes("\n")) {
     return `"${value.replace(/"/g, '""')}"`;
   }
   return value;
+}
+
+async function getExistingCsvContent(): Promise<string> {
+  try {
+    // List blobs to find our CSV file
+    const { blobs } = await list({ prefix: BLOB_FILENAME });
+
+    if (blobs.length > 0) {
+      // Fetch the existing content
+      const response = await fetch(blobs[0].url);
+      if (response.ok) {
+        return await response.text();
+      }
+    }
+  } catch {
+    console.log("No existing CSV found, creating new one");
+  }
+
+  // Return headers if no existing file
+  return CSV_HEADERS.join(",") + "\n";
 }
 
 export async function submitContactForm(formData: FormData) {
@@ -71,20 +71,28 @@ export async function submitContactForm(formData: FormData) {
       return { success: false, error: "Please fill in all required fields" };
     }
 
-    await ensureCsvFile();
+    // Get existing CSV content
+    const existingContent = await getExistingCsvContent();
 
-    const csvRow = [
-      escapeCSV(data.submittedAt),
-      escapeCSV(data.fullName),
-      escapeCSV(data.email),
-      escapeCSV(data.phoneNumber),
-      escapeCSV(data.isSohoMember),
-      escapeCSV(data.bedrooms),
-      escapeCSV(data.isRealEstateAgent),
-      escapeCSV(data.howDidYouHear),
-    ].join(",") + "\n";
+    const csvRow =
+      [
+        escapeCSV(data.submittedAt),
+        escapeCSV(data.fullName),
+        escapeCSV(data.email),
+        escapeCSV(data.phoneNumber),
+        escapeCSV(data.isSohoMember),
+        escapeCSV(data.bedrooms),
+        escapeCSV(data.isRealEstateAgent),
+        escapeCSV(data.howDidYouHear),
+      ].join(",") + "\n";
 
-    await fs.appendFile(CSV_FILE_PATH, csvRow);
+    // Append new row to existing content and upload
+    const newContent = existingContent + csvRow;
+
+    await put(BLOB_FILENAME, newContent, {
+      access: "public",
+      addRandomSuffix: false,
+    });
 
     return { success: true, message: "Thank you! We will be in touch soon." };
   } catch (error) {
