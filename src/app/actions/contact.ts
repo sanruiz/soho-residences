@@ -92,6 +92,7 @@ export async function submitContactForm(formData: FormData) {
     await put(BLOB_FILENAME, newContent, {
       access: "public",
       addRandomSuffix: false,
+      allowOverwrite: true,
     });
 
     return { success: true, message: "Thank you! We will be in touch soon." };
