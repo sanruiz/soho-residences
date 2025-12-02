@@ -48,6 +48,13 @@ export function ContactForm() {
         </div>
         <h3 className="text-2xl font-medium mb-2">Thank you!</h3>
         <p className="text-lg opacity-80">{state.message}</p>
+
+        <a
+          href="https://www.convergepay.com/hosted-payments?ssl_txn_auth_token=AUeCQ51LRwqsvG2b4FLvOwAAAZifO8g2"
+          className="mt-6 transition-all px-6 h-12 rounded-full bg-front-door-navy border border-front-door-navy text-linen hover:bg-transparent hover:text-front-door-navy flex items-center justify-center"
+        >
+          Make A Payment
+        </a>
       </div>
     );
   }
