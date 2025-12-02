@@ -18,7 +18,7 @@ export function FormInput({
   return (
     <div className="relative w-full -mt-px first:mt-0">
       {label && (
-        <label className="absolute top-2 left-4 pointer-events-none text-[11px] opacity-60 tracking-[0.01em] capitalize">
+        <label className="absolute top-2 left-4 pointer-events-none text-xs tracking-[0.01em] capitalize">
           {label}
         </label>
       )}
@@ -52,7 +52,7 @@ export function RadioGroup({
 
   return (
     <div className="relative w-full border border-front-door-navy pt-6 pb-2 px-4 -mt-px first:mt-0">
-      <label className="absolute top-2 left-4 text-[11px] opacity-60 tracking-[0.01em] capitalize">
+      <label className="absolute top-2 left-4 text-xs tracking-[0.01em] capitalize">
         {label}
       </label>
       <div className="flex gap-6">
@@ -87,8 +87,8 @@ export function BedroomSelector({
   defaultValue = 2,
 }: BedroomSelectorProps) {
   return (
-    <div className="relative w-full border border-front-door-navy pt-6 pb-2 px-4 -mt-px first:mt-0">
-      <label className="absolute top-2 left-4 text-[11px] opacity-60 tracking-[0.01em] capitalize">
+    <div className="relative w-full border border-front-door-navy pt-8 pb-2 px-4 -mt-px first:mt-0">
+      <label className="absolute top-2 left-4 text-xs tracking-[0.01em] capitalize">
         {label}
       </label>
       <div className="flex gap-3">
@@ -128,7 +128,7 @@ export function SelectInput({
 }: SelectInputProps) {
   return (
     <div className="relative w-full -mt-px first:mt-0">
-      <label className="absolute top-2 left-4 pointer-events-none z-10 text-[11px] opacity-60 tracking-[0.01em] capitalize">
+      <label className="absolute top-2 left-4 pointer-events-none z-10 text-xs tracking-[0.01em] capitalize">
         {label}
       </label>
       <select
