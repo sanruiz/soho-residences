@@ -50,7 +50,7 @@ export function ContactForm() {
         <p className="text-lg opacity-80">{state.message}</p>
 
         <a
-          href="https://www.convergepay.com/hosted-payments?ssl_txn_auth_token=AUeCQ51LRwqsvG2b4FLvOwAAAZifO8g2"
+          href={`https://www.convergepay.com/hosted-payments?ssl_txn_auth_token=${process.env.NEXT_PUBLIC_CONVERGE_PAY_TOKEN}`}
           className="mt-6 transition-all px-6 h-12 rounded-full bg-front-door-navy border border-front-door-navy text-linen hover:bg-transparent hover:text-front-door-navy flex items-center justify-center"
           rel="noopener noreferrer"
           aria-label="Make a Payment"
