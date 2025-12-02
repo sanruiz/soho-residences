@@ -1,10 +1,10 @@
 import { redirect } from "next/navigation";
-import { promises as fs } from "fs";
-import path from "path";
+import { list } from "@vercel/blob";
 import Link from "next/link";
 
 // Token secreto para acceder a la página
 const ADMIN_TOKEN = process.env.ADMIN_TOKEN || "soho-admin-2025";
+const BLOB_FILENAME = "contacts.csv";
 
 interface Contact {
   submittedAt: string;
@@ -18,10 +18,18 @@ interface Contact {
 }
 
 async function getContacts(): Promise<Contact[]> {
-  const csvPath = path.join(process.cwd(), "data", "contacts.csv");
-  
   try {
-    const csvContent = await fs.readFile(csvPath, "utf-8");
+    // Find the CSV blob
+    const { blobs } = await list({ prefix: BLOB_FILENAME });
+    
+    if (blobs.length === 0) {
+      return [];
+    }
+
+    // Fetch the content from the blob URL
+    const response = await fetch(blobs[0].url);
+    const csvContent = await response.text();
+    
     const lines = csvContent.trim().split("\n");
     
     // Skip header row
