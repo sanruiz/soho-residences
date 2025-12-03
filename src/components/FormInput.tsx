@@ -67,7 +67,7 @@ export function RadioGroup({
               value={option}
               defaultChecked={option === defaultOption}
               required={required}
-              className="w-4 h-4 cursor-pointer accent-black"
+              className="w-4 h-4 cursor-pointer accent-front-door-navy"
             />
             <span className="text-base opacity-90">{option}</span>
           </label>
