@@ -8,6 +8,7 @@ import {
   BedroomSelector,
   SelectInput,
 } from "@/components/FormInput";
+import { PhoneInput } from "@/components/PhoneInput";
 
 const initialState = {
   success: false,
@@ -72,12 +73,11 @@ export function ContactForm() {
 
       <FormInput label="Full name" name="fullName" placeholder="" required />
 
-      <FormInput
+      <PhoneInput
         label="Phone number"
         name="phoneNumber"
-        type="tel"
-        placeholder=""
         required
+        defaultCountry="MX"
       />
 
       <FormInput
