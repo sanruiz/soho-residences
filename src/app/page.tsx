@@ -15,8 +15,8 @@ export default function Home() {
           width={500}
           height={200}
           className="max-w-10/12 max-h-52 w-auto h-auto fill-front-door-navy"
-          priority
-        />
+          preload={true}
+         />
       </section>
 
       {/* SECTIONS 2-4 WITH NAVIGATION BAR */}
