@@ -31,7 +31,7 @@ export function ContactForm() {
   if (state.success) {
     return (
       <div className="flex flex-col items-center justify-center text-center py-12">
-        <div className="w-16 h-16 mb-6 rounded-full bg-front-door-navy flex items-center justify-center">
+        <div className="w-10 h-10 mb-3 rounded-full bg-front-door-navy flex items-center justify-center">
           <svg
             className="w-8 h-8 text-linen"
             fill="none"
@@ -46,22 +46,26 @@ export function ContactForm() {
             />
           </svg>
         </div>
-        <h3 className="text-2xl font-medium mb-6">Thank you!</h3>
-        <div className="text-base md:text-lg leading-7 space-y-3 mb-4 opacity-85">
-          <p>We sincerely appreciate your interest in our new development.</p>
-          <p>
-            To access detailed and exclusive information, we invite you to make
-            a fully refundable payment of $10,000 USD, held in an Escrow account
-            with Alianz Escrow, which is independent from the development.
+        <h3 className="text-3xl font-medium">Thank you!</h3>
+        <p className="opacity-85">
+          We sincerely appreciate your interest in our new development.
+        </p>
+        <div className="my-11">
+          <h3 className="text-2xl mb-2 font-medium opacity-100">
+            To access detailed and exclusive information and access our priority
+            list,
+          </h3>
+          <p className="opacity-85 max-w-2xl mx-auto ">
+            we invite you to make a fully refundable payment of $10,000 USD,
+            held in an Escrow account with Alianz Escrow, which is independent
+            from the development.
             <br />
-          </p>
-          <p className="text-xs md:text-base ">
             Please note that this payment does not create any obligation,
             commitment, liability, reservation, or guarantee of availability of
             any unit.
           </p>
+          <p className="text-xs md:text-base opacity-65 mt-6"></p>
         </div>
-
         <Button
           asChild
           className="mt-6 transition-all px-6 h-10 rounded-full cursor-pointer hover:bg-front-door-navy border border-front-door-navy hover:text-linen bg-transparent text-front-door-navy"
