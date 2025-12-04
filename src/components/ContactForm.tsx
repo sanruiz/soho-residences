@@ -50,7 +50,7 @@ export function ContactForm() {
         <p className="opacity-85">
           We sincerely appreciate your interest in our new development.
         </p>
-        <div className="my-11">
+        <div className="mt-11 mb-6">
           <h3 className="text-3xl mb-2 font-medium opacity-100">
             To access detailed and exclusive <br />
             information and access our priority list,
@@ -64,7 +64,6 @@ export function ContactForm() {
             commitment, liability, reservation, or guarantee of availability of
             any unit.
           </p>
-          <p className="text-xs md:text-base opacity-65 mt-6"></p>
         </div>
         <Button
           asChild
