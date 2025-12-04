@@ -2,6 +2,7 @@
 
 import { useActionState } from "react";
 import { submitContactForm } from "@/app/actions/contact";
+import { Button } from "@/components/ui/button";
 import {
   FormInput,
   RadioGroup,
@@ -12,7 +13,6 @@ import { PhoneInput } from "@/components/PhoneInput";
 
 const initialState = {
   success: false,
-  message: "",
   error: "",
 };
 
@@ -22,7 +22,6 @@ export function ContactForm() {
       const result = await submitContactForm(formData);
       return {
         success: result.success,
-        message: result.message || "",
         error: result.error || "",
       };
     },
@@ -47,17 +46,35 @@ export function ContactForm() {
             />
           </svg>
         </div>
-        <h3 className="text-2xl font-medium mb-2">Thank you!</h3>
-        <p className="text-lg opacity-80">{state.message}</p>
+        <h3 className="text-2xl font-medium mb-6">Thank you!</h3>
+        <div className="text-base md:text-lg leading-7 space-y-3 mb-4 opacity-85">
+          <p>We sincerely appreciate your interest in our new development.</p>
+          <p>
+            To access detailed and exclusive information, we invite you to make
+            a fully refundable payment of $10,000 USD, held in an Escrow account
+            with Alianz Escrow, which is independent from the development.
+            <br />
+          </p>
+          <p className="text-xs md:text-base ">
+            Please note that this payment does not create any obligation,
+            commitment, liability, reservation, or guarantee of availability of
+            any unit.
+          </p>
+        </div>
 
-        <a
-          href={`https://www.convergepay.com/hosted-payments?ssl_txn_auth_token=${process.env.NEXT_PUBLIC_CONVERGE_PAY_TOKEN}`}
-          className="mt-6 transition-all px-6 h-12 rounded-full bg-front-door-navy border border-front-door-navy text-linen hover:bg-transparent hover:text-front-door-navy flex items-center justify-center"
-          rel="noopener noreferrer"
-          aria-label="Make a Payment"
+        <Button
+          asChild
+          className="mt-6 transition-all px-6 h-10 rounded-full cursor-pointer hover:bg-front-door-navy border border-front-door-navy hover:text-linen bg-transparent text-front-door-navy"
         >
-          Make A Payment
-        </a>
+          <a
+            href={`https://www.convergepay.com/hosted-payments?ssl_txn_auth_token=${process.env.NEXT_PUBLIC_CONVERGE_PAY_TOKEN}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Make a Payment"
+          >
+            Make A Payment
+          </a>
+        </Button>
       </div>
     );
   }

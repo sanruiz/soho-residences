@@ -16,7 +16,7 @@ export default function Home() {
           height={200}
           className="max-w-10/12 max-h-52 w-auto h-auto fill-front-door-navy"
           preload={true}
-         />
+        />
       </section>
 
       {/* SECTIONS 2-4 WITH NAVIGATION BAR */}
@@ -42,7 +42,7 @@ export default function Home() {
           className="w-full flex items-center justify-center px-6 md:px-20 h-screen pt-20 snap-start bg-beach-house"
         >
           <div className="flex flex-col gap-0 w-full md:w-auto max-w-2xl">
-            <h2 className="mb-8 text-3xl tracking-[0.01em] text-front-door-navy ">
+            <h2 className="text-5xl md:text-6xl  mb-8 text-center">
               Inquire now
             </h2>
 

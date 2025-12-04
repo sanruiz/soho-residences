@@ -95,7 +95,7 @@ export async function submitContactForm(formData: FormData) {
       allowOverwrite: true,
     });
 
-    return { success: true, message: "Thank you! We will be in touch soon." };
+    return { success: true };
   } catch (error) {
     console.error("Error saving contact:", error);
     return { success: false, error: "Something went wrong. Please try again." };
