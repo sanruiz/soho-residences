@@ -6,9 +6,9 @@ import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="w-full h-screen overflow-y-scroll snap-y snap-mandatory">
+    <div className="w-full h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth">
       {/* SECTION 1 - HERO */}
-      <section className="w-full flex items-center justify-center h-screen bg-linen snap-start">
+      <section className="w-full flex flex-col items-center justify-center h-screen bg-linen snap-start relative">
         <Image
           src="/icons/sohoresidencesloscaboslogo.svg"
           alt="Soho Residences Los Cabos"
@@ -17,6 +17,28 @@ export default function Home() {
           className="max-w-10/12 max-h-52 w-auto h-auto fill-front-door-navy"
           preload={true}
         />
+
+        {/* Scroll indicator arrow */}
+        <a
+          href="#render"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce"
+        >
+          <div className="w-10 h-10 rounded-full border border-front-door-navy flex items-center justify-center">
+            <svg
+              className="w-5 h-5 text-front-door-navy"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </div>
+        </a>
       </section>
 
       {/* SECTIONS 2-4 WITH NAVIGATION BAR */}
@@ -24,7 +46,10 @@ export default function Home() {
         <NavigationBar />
 
         {/* SECTION 2 - PROJECT RENDER */}
-        <section className="w-full flex items-center justify-center h-screen bg-white">
+        <section
+          id="render"
+          className="w-full flex items-center justify-center h-screen bg-white"
+        >
           <div className="w-full h-full pt-16 relative">
             <Image
               src="/images/Scene2.png"
