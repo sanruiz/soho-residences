@@ -1,8 +1,7 @@
 "use client";
 
-import { useActionState } from "react";
+import { useActionState, useEffect, useRef } from "react";
 import { submitContactForm } from "@/app/actions/contact";
-import { Button } from "@/components/ui/button";
 import {
   FormInput,
   RadioGroup,
@@ -15,6 +14,35 @@ const initialState = {
   success: false,
   error: "",
 };
+
+function ConvergePayButton() {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (containerRef.current) {
+      // Limpiar el contenedor
+      containerRef.current.innerHTML = "";
+
+      // Crear el botón con estilos personalizados
+      const button = document.createElement("button");
+      button.disabled = true;
+      button.textContent = "Make A Payment";
+      button.className =
+        "mt-6 transition-all px-6 h-10 rounded-full cursor-pointer hover:bg-front-door-navy border border-front-door-navy hover:text-linen bg-transparent text-front-door-navy";
+
+      containerRef.current.appendChild(button);
+
+      // Inyectar el script de Converge Pay
+      const script = document.createElement("script");
+      script.src =
+        "https://www.convergepay.com/hosted-payments/buy_button_script/303168687a61753752394f36435030412b62766742414141415a72714b5a6166";
+      script.async = true;
+      containerRef.current.appendChild(script);
+    }
+  }, []);
+
+  return <div ref={containerRef} className="flex justify-center" />;
+}
 
 export function ContactForm() {
   const [state, formAction, isPending] = useActionState(
@@ -65,19 +93,7 @@ export function ContactForm() {
             any unit.
           </p>
         </div>
-        <Button
-          asChild
-          className="mt-6 transition-all px-6 h-10 rounded-full cursor-pointer hover:bg-front-door-navy border border-front-door-navy hover:text-linen bg-transparent text-front-door-navy"
-        >
-          <a
-            href={`https://www.convergepay.com/hosted-payments?ssl_txn_auth_token=${process.env.NEXT_PUBLIC_CONVERGE_PAY_TOKEN}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Make a Payment"
-          >
-            Make A Payment
-          </a>
-        </Button>
+        <ConvergePayButton />
       </div>
     );
   }
