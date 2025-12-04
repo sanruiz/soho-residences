@@ -39,7 +39,7 @@ export default function Home() {
         {/* SECTION 3 - INQUIRY FORM */}
         <section
           id="inquire"
-          className="w-full flex items-center text-front-door-navy justify-center px-6 md:px-20 h-screen pt-20 snap-start bg-beach-house"
+          className="w-full flex items-center text-front-door-navy justify-center px-6 md:px-20 min-h-screen md:h-screen py-20 snap-start bg-beach-house"
         >
           <div className="flex flex-col gap-0 w-full  max-w-3xl">
             <h2 className="text-5xl md:text-6xl  mb-8 text-center">

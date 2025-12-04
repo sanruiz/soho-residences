@@ -51,9 +51,9 @@ export function ContactForm() {
           We sincerely appreciate your interest in our new development.
         </p>
         <div className="my-11">
-          <h3 className="text-2xl mb-2 font-medium opacity-100">
-            To access detailed and exclusive information and access our priority
-            list,
+          <h3 className="text-3xl mb-2 font-medium opacity-100">
+            To access detailed and exclusive <br />
+            information and access our priority list,
           </h3>
           <p className="opacity-85 max-w-2xl mx-auto ">
             we invite you to make a fully refundable payment of $10,000 USD,
@@ -168,7 +168,7 @@ export function ContactForm() {
         {isPending ? "Submitting..." : "Submit"}
       </button>
 
-      <p className="mt-6 text-xs leading-snug opacity-70 tracking-wide">
+      <p className="my-6 text-xs leading-snug opacity-70 tracking-wide">
         This site is protected by reCAPTCHA and the{" "}
         <a href="/privacy-policy" target="_blank" className="font-semibold">
           Privacy Policy
